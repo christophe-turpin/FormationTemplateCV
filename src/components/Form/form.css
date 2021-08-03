@@ -1,0 +1,11 @@
+#formations {
+    padding-top: 10px;
+    margin-top: 10px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 99%;
+}
+
+#formations h5 {
+    color: teal;
+}

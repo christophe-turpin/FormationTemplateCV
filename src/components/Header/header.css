@@ -1,0 +1,20 @@
+.header{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background: #161415 url('../../assets/banniere.jpg') top center;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    background-position: bottom;
+    text-align: center;
+    color: teal;
+    text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+    padding-top: 50px;
+    margin: 0%;
+}
+
+#hright, #job {
+    font-weight: bold;
+    color: whitesmoke;
+    text-shadow: -1px 0 teal, 0 1px teal, 1px 0 teal, 0 -1px teal;
+}

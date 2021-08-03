@@ -1,0 +1,14 @@
+.title {
+  color: teal;
+}
+.App {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer {
+  margin-top: 10px;
+  align-self: flex-end;
+}

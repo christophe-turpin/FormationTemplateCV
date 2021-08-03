@@ -1,0 +1,27 @@
+#haut{
+    margin: 0%;
+}
+
+
+#experiences {
+    padding-top: 10px;
+    margin-top: 10px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 99%;
+}
+
+.devExp, .nodevExp {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+.devExp .exp {
+    max-width: 23%;
+}
+.devExp h4, .nodevExp h5 {
+    color: teal;
+}
+.devExp span, .nodevExp span {
+    font-style: italic;
+}
