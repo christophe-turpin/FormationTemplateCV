@@ -6,6 +6,29 @@
     width: 99%;
 }
 
+.icons {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+
+#formations h1 #addIcon {
+    display: none;
+}
+
+#formations h1:hover #addIcon {
+    display: inline;
+}
+
+.formation .icons {
+    display: none;
+}
+
+.formation:hover .icons {
+    display: flex;
+}
+
 #formations h5 {
     color: teal;
 }
