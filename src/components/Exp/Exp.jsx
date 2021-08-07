@@ -118,7 +118,7 @@ function Exp() {
                 onClick={() => addDevExp()}
                 icon={faPlus}
                 className="addIcon"
-                size="md"
+                size="sm"
               />
             )}
           </h4>
@@ -131,12 +131,12 @@ function Exp() {
                   <FontAwesomeIcon
                     onClick={() => putDevExp(e)}
                     icon={faPencilAlt}
-                    size="md"
+                    size="sm"
                   />
                   <FontAwesomeIcon
                     onClick={() => delDevExp(e)}
                     icon={faTrashAlt}
-                    size="md"
+                    size="sm"
                   />
                 </div>
                 {"  "}
@@ -160,7 +160,7 @@ function Exp() {
                 onClick={() => addNoDevExp()}
                 icon={faPlus}
                 className="addIcon"
-                size="md"
+                size="sm"
               />
             )}
           </h4>
@@ -173,12 +173,12 @@ function Exp() {
                   <FontAwesomeIcon
                     onClick={() => putNoDevExp(e)}
                     icon={faPencilAlt}
-                    size="md"
+                    size="sm"
                   />
                   <FontAwesomeIcon
                     onClick={() => delNoDevExp(e)}
                     icon={faTrashAlt}
-                    size="md"
+                    size="sm"
                   />
                 </div>
                 {"  "}

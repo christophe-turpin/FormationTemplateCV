@@ -81,7 +81,7 @@ function Header() {
             onClick={() => putHeader("name")}
             icon={faPencilAlt}
             className="putIcon"
-            size="md"
+            size="sm"
           />
         </h1>
         <br />
@@ -91,7 +91,7 @@ function Header() {
             onClick={() => putHeader("job")}
             icon={faPencilAlt}
             className="putIcon"
-            size="md"
+            size="sm"
           />
         </h3>
       </div>
@@ -103,7 +103,7 @@ function Header() {
             onClick={() => putHeader("phone")}
             icon={faPencilAlt}
             className="putIcon"
-            size="md"
+            size="sm"
           />
         </h4>
         <h4 id="mail">
@@ -112,7 +112,7 @@ function Header() {
             onClick={() => putHeader("mail")}
             icon={faPencilAlt}
             className="putIcon"
-            size="md"
+            size="sm"
           />
         </h4>
         <h4 id="portfolio">
@@ -121,7 +121,7 @@ function Header() {
             onClick={() => putHeader("portfolio")}
             icon={faPencilAlt}
             className="putIcon"
-            size="md"
+            size="sm"
           />
         </h4>
       </div>

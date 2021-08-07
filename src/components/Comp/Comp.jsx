@@ -94,7 +94,7 @@ function Comp() {
                 onClick={() => addHardSkill()}
                 icon={faPlus}
                 className="addIcon"
-                size="md"
+                size="sm"
               />
             )}
           </h4>
@@ -106,12 +106,12 @@ function Comp() {
                     <FontAwesomeIcon
                       onClick={() => putHardSkill(comp)}
                       icon={faPencilAlt}
-                      size="md"
+                      size="sm"
                     />
                     <FontAwesomeIcon
                       onClick={() => delHardSkill(comp)}
                       icon={faTrashAlt}
-                      size="md"
+                      size="sm"
                     />
                   </div>
                   {"  "}
@@ -134,7 +134,7 @@ function Comp() {
                 onClick={() => addSoftSkill()}
                 icon={faPlus}
                 className="addIcon"
-                size="md"
+                size="sm"
               />
             )}
           </h4>
@@ -146,12 +146,12 @@ function Comp() {
                     <FontAwesomeIcon
                       onClick={() => putSoftSkill(comp)}
                       icon={faPencilAlt}
-                      size="md"
+                      size="sm"
                     />
                     <FontAwesomeIcon
                       onClick={() => delSoftSkill(comp)}
                       icon={faTrashAlt}
-                      size="md"
+                      size="sm"
                     />
                   </div>
                   {"  "}

@@ -69,7 +69,7 @@ function Form() {
             onClick={() => addForm()}
             icon={faPlus}
             className="addIcon"
-            size="md"
+            size="sm"
           />
         )}
       </h1>
