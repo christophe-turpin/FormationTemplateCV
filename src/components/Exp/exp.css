@@ -11,6 +11,25 @@
     width: 99%;
 }
 
+#experiences .addIcon {
+    display: none;
+}
+
+.exp .icons {
+    display: none;
+}
+
+.exp:hover .icons {
+    display: flex;
+    flex-flow: column nowrap !important;
+    justify-content: space-around !important;
+    align-items: center;
+    width: 30px;
+}
+#experiences #experiencesList h4:hover .addIcon {
+    display: inline;
+}
+
 .devExp, .nodevExp {
     display: flex;
     flex-flow: row nowrap;

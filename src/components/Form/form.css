@@ -6,18 +6,12 @@
     width: 99%;
 }
 
-.icons {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-}
 
-
-#formations h1 #addIcon {
+#formations h1 .addIcon {
     display: none;
 }
 
-#formations h1:hover #addIcon {
+#formations h1:hover .addIcon {
     display: inline;
 }
 
@@ -27,6 +21,8 @@
 
 .formation:hover .icons {
     display: flex;
+    flex-flow: column nowrap !important;
+    justify-content: space-around !important;
 }
 
 #formations h5 {

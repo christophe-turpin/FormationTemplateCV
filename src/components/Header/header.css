@@ -18,3 +18,10 @@
     color: whitesmoke;
     text-shadow: -1px 0 teal, 0 1px teal, 1px 0 teal, 0 -1px teal;
 }
+.putIcon {
+    display: none;
+}
+
+#name:hover .putIcon, #job:hover .putIcon, #phone:hover .putIcon, #mail:hover .putIcon, #portfolio:hover .putIcon {
+    display: inline;
+}

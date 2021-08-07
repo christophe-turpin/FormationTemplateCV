@@ -68,8 +68,8 @@ function Form() {
           <FontAwesomeIcon
             onClick={() => addForm()}
             icon={faPlus}
-            id="addIcon"
-            size="xs"
+            className="addIcon"
+            size="md"
           />
         )}
       </h1>
@@ -82,14 +82,10 @@ function Form() {
                 <FontAwesomeIcon
                   onClick={() => putForm(form)}
                   icon={faPencilAlt}
-                  id="putIcon"
-                  size="xs"
                 />
                 <FontAwesomeIcon
                   onClick={() => delForm(form)}
                   icon={faTrashAlt}
-                  id="delIcon"
-                  size="xs"
                 />
               </div>
               <div className="col-3 text-left">

@@ -5,7 +5,22 @@
     border-radius: 20px;
     width: 99%;
 }
+#competences .addIcon, #competences .icons {
+    display: none;
+}
 
+
+#competences .hard:hover .icons, #competences .soft:hover .icons {
+    display: flex;
+    flex-flow: column nowrap !important;
+    justify-content: space-around !important;
+    align-items: center;
+    width: 30px;
+}
+
+#competences h4:hover .addIcon {
+    display: inline;
+}
 #competences h5 {
     color: teal;
 }
