@@ -14,10 +14,12 @@ function Comp() {
   const getComp = () => {
     axios
       .get("http://localhost:3000/api/competences/hard")
-      .then((response) => setHardSkills([...response.data]));
+      .then((response) => setHardSkills([...response.data]))
+      .catch((error) => console.log(error));
     axios
       .get("http://localhost:3000/api/competences/soft")
-      .then((response) => setSoftSkills([...response.data]));
+      .then((response) => setSoftSkills([...response.data]))
+      .catch((error) => console.log(error));
   };
 
   const addHardSkill = () => {
