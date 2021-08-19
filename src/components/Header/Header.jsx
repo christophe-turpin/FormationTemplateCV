@@ -2,14 +2,20 @@ import React, { useEffect, useState } from "react";
 import "./header.css";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import { faPencilAlt, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   const [resumeData, setResumeData] = useState({});
   const getHeader = () => {
-    axios.get("http://localhost:3000/api/header").then((response) => {
-      setResumeData({ ...resumeData, header: response.data[0] });
-    });
+    axios
+      .get(
+        `http://localhost:3000/api/header/${
+          JSON.parse(localStorage.currentToken)._id
+        }`
+      )
+      .then((response) => {
+        setResumeData({ ...resumeData, header: response.data });
+      });
   };
 
   const putHeader = (e) => {
@@ -68,6 +74,11 @@ function Header() {
         break;
     }
   };
+
+  const logOut = () => {
+    localStorage.removeItem("currentToken");
+    window.location.reload(false);
+  };
   useEffect(() => {
     getHeader();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -80,6 +91,12 @@ function Header() {
           <FontAwesomeIcon
             onClick={() => putHeader("name")}
             icon={faPencilAlt}
+            className="putIcon"
+            size="sm"
+          />
+          <FontAwesomeIcon
+            onClick={logOut}
+            icon={faPowerOff}
             className="putIcon"
             size="sm"
           />

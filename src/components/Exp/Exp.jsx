@@ -13,10 +13,18 @@ function Exp() {
   const [NoDevExp, setNoDevExp] = useState([]);
   const getExp = () => {
     axios
-      .get("http://localhost:3000/api/experience/devexp")
+      .get(
+        `http://localhost:3000/api/experience/devexp/${
+          JSON.parse(localStorage.currentToken)._id
+        }`
+      )
       .then((response) => setDevExp([...response.data]));
     axios
-      .get("http://localhost:3000/api/experience/nodevexp")
+      .get(
+        `http://localhost:3000/api/experience/nodevexp/${
+          JSON.parse(localStorage.currentToken)._id
+        }`
+      )
       .then((response) => setNoDevExp([...response.data]));
   };
 
@@ -31,6 +39,7 @@ function Exp() {
             "Tâches effectuées et compétences utilisées pour ce métier"
           )?.toString(),
           date: prompt("Date du projet ou de l'expérience")?.toString(),
+          userId: JSON.parse(localStorage.currentToken)._id,
         })
         .then(() => getExp())
         .catch((error) => console.log(error));
@@ -47,6 +56,7 @@ function Exp() {
             "Technos et compétences utilisées pour ce projets"
           )?.toString(),
           date: prompt("Date du projet ou de l'expérience")?.toString(),
+          userId: JSON.parse(localStorage.currentToken)._id,
         })
         .then(() => getExp())
         .catch((error) => console.log(error));
@@ -64,6 +74,7 @@ function Exp() {
             "Technos et compétences utilisées pour ce projets"
           )?.toString() || e.stack,
         date: prompt("Date de la formation")?.toString() || e.date,
+        userId: JSON.parse(localStorage.currentToken)._id,
       })
       .then(() => getExp())
       .catch((error) => console.log(error));
@@ -82,6 +93,7 @@ function Exp() {
             "Technos et compétences utilisées pour ce projets"
           )?.toString() || e.realization,
         date: prompt("Date du projet ou de l'expérience")?.toString() || e.date,
+        userId: JSON.parse(localStorage.currentToken)._id,
       })
       .then(() => getExp())
       .catch((error) => console.log(error));

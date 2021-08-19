@@ -12,7 +12,11 @@ function Form() {
   const [resumeData, setResumeData] = useState({});
   const getForm = () => {
     axios
-      .get("http://localhost:3000/api/formation")
+      .get(
+        `http://localhost:3000/api/formation/${
+          JSON.parse(localStorage.currentToken)._id
+        }`
+      )
       .then((response) => setResumeData({ ...resumeData, form: response.data }))
       .catch((error) => console.log(error));
   };
@@ -27,6 +31,7 @@ function Form() {
             "Ecole dans laquelle vous avez suivi la formation"
           )?.toString(),
           date: prompt("Date de la formation")?.toString(),
+          userId: JSON.parse(localStorage.currentToken)._id,
         })
         .then(() => getForm())
         .catch((error) => console.log(error));
@@ -43,6 +48,7 @@ function Form() {
             "Ecole dans laquelle vous avez suivi la formation"
           )?.toString() || e.school,
         date: prompt("Date de la formation")?.toString() || e.date,
+        userId: JSON.parse(localStorage.currentToken)._id,
       })
       .then(() => getForm())
       .catch((error) => console.log(error));

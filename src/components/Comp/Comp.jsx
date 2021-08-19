@@ -13,11 +13,19 @@ function Comp() {
   const [SoftSkills, setSoftSkills] = useState([]);
   const getComp = () => {
     axios
-      .get("http://localhost:3000/api/competences/hard")
+      .get(
+        `http://localhost:3000/api/competences/hard/${
+          JSON.parse(localStorage.currentToken)._id
+        }`
+      )
       .then((response) => setHardSkills([...response.data]))
       .catch((error) => console.log(error));
     axios
-      .get("http://localhost:3000/api/competences/soft")
+      .get(
+        `http://localhost:3000/api/competences/soft/${
+          JSON.parse(localStorage.currentToken)._id
+        }`
+      )
       .then((response) => setSoftSkills([...response.data]))
       .catch((error) => console.log(error));
   };
@@ -28,6 +36,7 @@ function Comp() {
         .post("http://localhost:3000/api/competences/hard", {
           name: prompt("Nom de la compétence")?.toString(),
           description: prompt("Description de la compétence")?.toString(),
+          userId: JSON.parse(localStorage.currentToken)._id,
         })
         .then(() => getComp())
         .catch((error) => console.log(error));
@@ -39,6 +48,7 @@ function Comp() {
         .post("http://localhost:3000/api/competences/soft", {
           name: prompt("Nom de la compétence")?.toString(),
           description: prompt("Description de la compétence")?.toString(),
+          userId: JSON.parse(localStorage.currentToken)._id,
         })
         .then(() => getComp())
         .catch((error) => console.log(error));
@@ -50,6 +60,7 @@ function Comp() {
         name: prompt("Nom de la compétence")?.toString() || e.name,
         description:
           prompt("Description de la compétence")?.toString() || e.description,
+        userId: JSON.parse(localStorage.currentToken)._id,
       })
       .then(() => getComp())
       .catch((error) => console.log(error));
@@ -61,6 +72,7 @@ function Comp() {
         name: prompt("Nom de la compétence")?.toString() || e.name,
         description:
           prompt("Description de la compétence")?.toString() || e.description,
+        userId: JSON.parse(localStorage.currentToken)._id,
       })
       .then(() => getComp())
       .catch((error) => console.log(error));
